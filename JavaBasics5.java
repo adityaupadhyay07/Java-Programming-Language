@@ -204,7 +204,8 @@ public class JavaBasics5{
         // zero_one_triangle(5);
         // butterfly_Pattern(4);
         // solid_Rhombus(5);
-        hollow_Rhombus(5);
+        // hollow_Rhombus(5);
+        diamond_Pattern(4);
     }
 }
 
