@@ -101,26 +101,55 @@
 
 
 // find largest number in a given Array
-import java.util.*;
-public class ArraysCC{
-    public static int getLargest(int numbers[]){
-        int largest = Integer.MIN_VALUE; // -Infinity
-        int smallest = Integer.MAX_VALUE; // +Infinity
+// import java.util.*;
+// public class ArraysCC{
+//     public static int getLargest(int numbers[]){
+//         int largest = Integer.MIN_VALUE; // -Infinity
+//         int smallest = Integer.MAX_VALUE; // +Infinity
 
-        for(int i=0; i<numbers.length; i++){
-            if(largest < numbers[i]){
-                largest = numbers[i];
+//         for(int i=0; i<numbers.length; i++){
+//             if(largest < numbers[i]){
+//                 largest = numbers[i];
+//             }
+//             if(smallest > numbers[i]){
+//                 smallest = numbers[i];
+//             }
+//         }
+//         System.out.println("smallest value is : " + smallest);
+//         return largest;
+//     }
+//     public static void main(String args []){
+//         int numbers[] = {1, 2, 6, 3, 5};
+//         System.out.println("largest value is : " + getLargest(numbers));
+
+//     }
+// }
+
+// Binary Search 
+public class ArrayCC{
+    public static int  binarySearch(int numbers[], int key){
+        int start = 0, end = numbers.length -1;
+
+        while(start <= end){
+            int mid = (start + end) / 2;
+
+            // Comparisons
+            if(numbers[mid] == key){ // found
+                return mid;
             }
-            if(smallest > numbers[i]){
-                smallest = numbers[i];
+            if(numbers[mid] < key){ // right
+                start = mid + 1;
+            }else{ // left
+                end = mid - 1;
+
             }
         }
-        System.out.println("smallest value is : " + smallest);
-        return largest;
+        return -1;
     }
     public static void main(String args []){
-        int numbers[] = {1, 2, 6, 3, 5};
-        System.out.println("largest value is : " + getLargest(numbers));
+        int numbers[] = {2, 4, 6, 8, 10, 12, 14};
+        int key = 10;
 
+        System.out.println("index for key is : " + binarySearch(numbers, key));
     }
 }
