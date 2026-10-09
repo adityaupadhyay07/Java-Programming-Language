@@ -75,26 +75,52 @@
 //     }
 // }
 
+// Linear Search
+// public class ArraysCC{
+//     public static int linearSearch(String menu[], String key){
+//         for(int i=0; i<menu.length; i++){
+//             if(menu[i] == key){
+//                 return i;
+//             }
+//         }
+//         return -1;
+//     }
+//     public static void main(String args []){
+//         String menu[] = {"dosa", "chole bhature", "samosa","tea", "coke"};
+//         String key = "tea";
 
+//         int index = linearSearch(menu, key);
+        
+//         if(index == -1){
+//             System.out.println("Not found");
+//         }else{
+//             System.out.println("key is at index : " + index);
+//         }
+//     }
+// }  // T.C - o(n)
+
+
+// find largest number in a given Array
+import java.util.*;
 public class ArraysCC{
-    public static int linearSearch(String menu[], String key){
-        for(int i=0; i<menu.length; i++){
-            if(menu[i] == key){
-                return i;
+    public static int getLargest(int numbers[]){
+        int largest = Integer.MIN_VALUE; // -Infinity
+        int smallest = Integer.MAX_VALUE; // +Infinity
+
+        for(int i=0; i<numbers.length; i++){
+            if(largest < numbers[i]){
+                largest = numbers[i];
+            }
+            if(smallest > numbers[i]){
+                smallest = numbers[i];
             }
         }
-        return -1;
+        System.out.println("smallest value is : " + smallest);
+        return largest;
     }
     public static void main(String args []){
-        String menu[] = {"dosa", "chole bhature", "samosa","tea", "coke"};
-        String key = "tea";
+        int numbers[] = {1, 2, 6, 3, 5};
+        System.out.println("largest value is : " + getLargest(numbers));
 
-        int index = linearSearch(menu, key);
-        
-        if(index == -1){
-            System.out.println("Not found");
-        }else{
-            System.out.println("key is at index : " + index);
-        }
     }
-}  // T.C - o(n)
+}
