@@ -152,7 +152,7 @@
 
 // Reverse an Array
 public class ArrayCC{
-    public static int reverse(int numbers[]){
+    public static void reverse(int numbers[]){
         int first = 0, last = numbers.length-1;
 
         while(first < last){
