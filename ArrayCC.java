@@ -276,7 +276,9 @@ public class ArrayCC{
             int start = i;
             for(int j=i; j<numbers.length; j++){  
                 int end = j;
+
                 currSum = start == 0 ? prefix[end] : prefix[end] - prefix[start - 1];
+
                 if(maxSum < currSum){
                     maxSum = currSum;
                 }
@@ -285,8 +287,7 @@ public class ArrayCC{
         System.out.println("max sum = " + maxSum);
     }
     public static void main(String args []){
-        // int numbers [] = {2, 4, 6, 8, 10};
-        int numbers [] = {};
+        int numbers [] = {1, -2, 6, -1, 3};
         maxSubarraySum(numbers);
     }
 }
