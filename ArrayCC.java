@@ -1,4 +1,4 @@
-// import java.util.*;
+
 // public class ArraysCC{
 //     public static void main(String args []){
 //         int marks [] = new int[100];
@@ -313,22 +313,68 @@
 
 
 // Kadanes Algorithim
-public class ArrayCC{
-    public static void kadanes(int numbers[]){
-        int ms = Integer.MIN_VALUE;
-        int cs = 0;
+// public class ArrayCC{
+//     public static void kadanes(int numbers[]){
+//         int ms = Integer.MIN_VALUE;
+//         int cs = 0;
 
-        for(int i=0; i<numbers.length; i++){
-            cs = cs + numbers[i];
-            if(cs < 0){
-                cs = 0;
+//         for(int i=0; i<numbers.length; i++){
+//             cs = cs + numbers[i];
+//             if(cs < 0){
+//                 cs = 0;
+//             }
+//             ms = Math.max(cs, ms);
+//         }
+//         System.out.println("our max subarray sum  is : " + ms);
+//     }
+//     public static void main(String args []){
+//         int numbers[] = {-1, -2, -3, -4};
+//         kadanes(numbers);
+//     }
+// }
+
+
+// Trapping RainWater
+// public class ArrayCC{
+//     public static int trappedRainWater(int height[]){
+//         // calculate left max boundary - array 
+//         int leftMax[] = new int[height.length];
+//         leftMax[0] = height[0];
+//         // calculate rigth max boundary - array
+
+//         //loop
+
+//         // waterLevel = min(leftMax bound , rightMax bound)
+
+//         // trapped water = waterLevel - height 
+
+
+
+//     }
+//     public static void main(String args []){
+//         int height[] = {4, 2, 0, 6, 3, 2, 5};
+//     }
+// }
+
+
+// Best Time to Buy & sell stock
+public class ArrayCC{
+    public static int buyAndSellStocks(int prices []){
+        int buyPrice = Integer.MAX_VALUE;
+        int maxProfit = 0;
+
+        for(int i=0; i<prices.length; i++){
+            if(buyPrice < prices[i]){
+                int profit  = prices[i] - buyPrice;
+                maxProfit =  Math.max(maxProfit,profit);
+            }else{
+                buyPrice = prices[i];
             }
-            ms = Math.max(cs, ms);
         }
-        System.out.println("our max subarray sum  is : " + ms);
+        return   maxProfit;
     }
     public static void main(String args []){
-        int numbers[] = {-1, -2, -3, -4};
-        kadanes(numbers);
+        int prices[] = {7, 1, 5, 3, 6, 4};
+        System.out.println(buyAndSellStocks(prices));
     }
 }
