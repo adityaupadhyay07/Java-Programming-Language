@@ -56,20 +56,46 @@
 //     }
 // }
 
+// public class ArrayCC{
+//     public static int linearSearch(int numbers[], int key){
+//         for(int i=0; i<numbers.length; i++){
+//             if(numbers[i] == key){
+//                 return i;
+//             }
+//         }
+//         return  -1;
+//     }
+//     public static void main(String args []){
+//         int numbers[] ={2, 4, 6, 8, 10, 12, 14, 16};
+//         int key = 10;
+
+//         int  index = linearSearch(numbers, key);
+
+//         if(index == -1){
+//             System.out.println("Not found");
+//         }else{
+//             System.out.println("key is at index : " + index);
+//         }
+//     }
+// }
+
+
+
 public class ArrayCC{
-    public static int linearSearch(int numbers[], int key){
-        for(int i=0; i<numbers.length; i++){
-            if(numbers[i] == key){
+    public static int linearSearch(String foodMenu[], String key){
+        for(int i=0; i<foodMenu.length; i++){
+            if(foodMenu[i] == key){
                 return i;
             }
         }
-        return  -1;
+        return -1;
     }
     public static void main(String args []){
-        int numbers[] ={2, 4, 6, 8, 10, 12, 14, 16};
-        int key = 10;
+        String foodMenu[] = {"Pizza", "Burger","Biryani", "Paneer Tikka", "Masala Dosa", "Pasta",
+        "French Fries", "Momos", "Cold Coffee","Ice Cream"};
+        String key = "Momos";
 
-        int  index = linearSearch(numbers, key);
+        int index = linearSearch(foodMenu, key);
 
         if(index == -1){
             System.out.println("Not found");
