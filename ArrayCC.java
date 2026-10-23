@@ -18,7 +18,7 @@ public class ArrayCC{
         // marks[2] = 100; // update
         // System.out.println("math : " + marks[2]);
 
-        marks[2] = marks[1] + 1; // update
+        marks[2] = marks[2] + 1; // update
         System.out.println("math : " + marks[2]);
     }
 }  
