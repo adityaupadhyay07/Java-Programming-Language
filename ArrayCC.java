@@ -28,30 +28,53 @@
 //         }
 // }  
 
+// public class ArrayCC{
+//     public static void update(int marks[], int nonChangable){
+//         nonChangable = 10;
+//         for(int i=0; i<marks.length; i++){
+//             marks[i] =  marks[i] + 1;
+//         }
+//     }
+//     public static void main(String args []){
+//         int marks[] = {97, 98, 99};
+//         int nonChangable = 5;
+//         update(marks, nonChangable);
+
+//         System.out.println(nonChangable);
+
+
+//           // print our marks
+//         //   System.out.print(marks[0] + " ");
+//         //   System.out.print(marks[1] + " ");
+//         //   System.out.print(marks[2] + " ");
+//                                                // -->  both are same 
+//         // print our marks
+//         for(int i=0; i<marks.length; i++){
+//             System.out.print(marks[i] + " ");
+//         }
+//         System.out.println();
+//     }
+// }
+
 public class ArrayCC{
-    public static void update(int marks[], int nonChangable){
-        nonChangable = 10;
-        for(int i=0; i<marks.length; i++){
-            marks[i] =  marks[i] + 1;
+    public static int linearSearch(int numbers[], int key){
+        for(int i=0; i<numbers.length; i++){
+            if(numbers[i] == key){
+                return i;
+            }
         }
+        return  -1;
     }
     public static void main(String args []){
-        int marks[] = {97, 98, 99};
-        int nonChangable = 5;
-        update(marks, nonChangable);
+        int numbers[] ={2, 4, 6, 8, 10, 12, 14, 16};
+        int key = 10;
 
-        System.out.println(nonChangable);
+        int  index = linearSearch(numbers, key);
 
-
-          // print our marks
-        //   System.out.print(marks[0] + " ");
-        //   System.out.print(marks[1] + " ");
-        //   System.out.print(marks[2] + " ");
-                                               // -->  both are same 
-        // print our marks
-        for(int i=0; i<marks.length; i++){
-            System.out.print(marks[i] + " ");
+        if(index == -1){
+            System.out.println("Not found");
+        }else{
+            System.out.println("key is at index : " + index);
         }
-        System.out.println();
     }
 }
