@@ -42,7 +42,6 @@ public class ArrayCC{
 
         System.out.println(nonChangable);
 
-        // print our marks 
         for(int i=0; i<marks.length; i++){
             System.out.print(marks[i] + " ");
         }
