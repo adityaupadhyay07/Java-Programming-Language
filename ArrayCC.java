@@ -15,8 +15,10 @@ public class ArrayCC{
         System.out.println("chem : " + marks[1]);
         System.out.println("math : " + marks[2]);
 
-        marks[2] = 100; // update
-        System.out.println("math : " + marks[2]);
+        // marks[2] = 100; // update
+        // System.out.println("math : " + marks[2]);
 
+        marks[2] = marks[1] + 2 ; // update
+        System.out.println("math : " + marks[2]);
     }
 }  
