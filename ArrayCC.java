@@ -114,7 +114,8 @@ public class ArrayCC{
         for(int i=0; i<numbers.length; i++){
             if(largest < numbers[i]){
                 largest = numbers[i];
-            }if(smallest < numbers[i]) {
+            }
+            if(smallest > numbers[i]) {
                 smallest = numbers[i];
             }
         }
