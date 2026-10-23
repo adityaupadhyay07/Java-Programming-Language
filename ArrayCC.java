@@ -81,26 +81,44 @@
 
 
 
+// public class ArrayCC{
+//     public static int linearSearch(String foodMenu[], String key){
+//         for(int i=0; i<foodMenu.length; i++){
+//             if(foodMenu[i] == key){
+//                 return i;
+//             }
+//         }
+//         return -1;
+//     }
+//     public static void main(String args []){
+//         String foodMenu[] = {"Pizza", "Burger","Biryani", "Paneer Tikka", "Masala Dosa", "Pasta",
+//         "French Fries", "Momos", "Cold Coffee","Ice Cream"};
+//         String key = "Momos";
+
+//         int index = linearSearch(foodMenu, key);
+
+//         if(index == -1){
+//             System.out.println("Not found");
+//         }else{
+//             System.out.println("key is at index : " + index);
+//         }
+//     }
+// }
+
+// Largest in Array 
 public class ArrayCC{
-    public static int linearSearch(String foodMenu[], String key){
-        for(int i=0; i<foodMenu.length; i++){
-            if(foodMenu[i] == key){
-                return i;
+    public static int getLargest(int numbers[]){
+        int largest = Integer.MIN_VALUE; // -infinity 
+
+        for(int i=0; i<numbers.length; i++){
+            if(largest < numbers[i]){
+                largest = numbers[i];
             }
         }
-        return -1;
+        return largest;
     }
-    public static void main(String args []){
-        String foodMenu[] = {"Pizza", "Burger","Biryani", "Paneer Tikka", "Masala Dosa", "Pasta",
-        "French Fries", "Momos", "Cold Coffee","Ice Cream"};
-        String key = "Momos";
-
-        int index = linearSearch(foodMenu, key);
-
-        if(index == -1){
-            System.out.println("Not found");
-        }else{
-            System.out.println("key is at index : " + index);
-        }
+    public static void main(String args[]){
+        int numbers[] = {1, 2, 6, 3, 5};
+        System.out.println("largest value is : " + getLargest(numbers));
     }
 }
