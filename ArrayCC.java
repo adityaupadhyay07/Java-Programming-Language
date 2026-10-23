@@ -42,9 +42,16 @@ public class ArrayCC{
 
         System.out.println(nonChangable);
 
-        for(int i=0; i<marks.length; i++){
-            System.out.print(marks[i] + " ");
-        }
-        System.out.println();
+
+          // print our marks
+          System.out.print(marks[0] + " ");
+          System.out.print(marks[1] + " ");
+          System.out.print(marks[2] + " ");
+
+        // // print our marks
+        // for(int i=0; i<marks.length; i++){
+        //     System.out.print(marks[i] + " ");
+        // }
+        // System.out.println();
     }
 }
